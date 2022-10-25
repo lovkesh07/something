@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="start.css">
+
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+
+            <header>
+                <a href="" class="logo"> Luv.Code</a>
+                <ul>
+                    <li><a href="" class="active">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+
+                </ul>
+            </header>
+
+            <div class="content">
+                <h2>hello world</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ex temporibus commodi repudiandae
+                    voluptas ipsum, asperiores error, aperiam similique placeat vel reiciendis natus explicabo veniam!
+                    Eligendi molestias recusandae non deleniti.</p>
+                <a href="">Read more</a>
+            </div>
+            <div class="imgBx">
+                <img src="character.png">
+                <!-- <img src="69.jpg" alt=""> -->
+            </div>
+
+            <p class="copyrighttext">Copyright @ 2021 Lovkesh Pate. All Right Reserved.</p>
+        </div>
+
+    </section>
+
+    <div class="visitor">
+        <p>This page was viewed</p>
+        <h1 id="count">0</h1>
+        <p>times</p>
+    </div>
+
+<script>
+    const countEl = document.getElementById("count");
+
+updateVisitCount();
+
+function updateVisitCount() {
+	fetch("https://api.countapi.xyz/update/lovkesh/youtube/?amount=1")
+		.then((res) => res.json())
+		.then((res) => {
+			countEl.innerHTML = res.value;
+		});
+}
+</script>
+
+</body>
+
+</html>

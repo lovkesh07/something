@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.boxcom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.box{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box h2{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,0 0 20px #00b3ff,0 0 40px #00b3ff,0 0 80px #00b3ff,0 0 120px #00b3ff;
+}
+.lightbar{
+    position: absolute;
+    top: 30%;
+    left:34%;
+    width: 10px;
+    height:40%;
+    border-radius:10px ;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 0 10px #00b3ff,0 0 20px #00b3ff,0 0 40px #00b3ff,0 0 80px #00b3ff,0 0 120px #00b3ff;
+    animation: animatelightbar 5s linear infinite;
+}
+@keyframes animatelightbar{
+    0%,5%{
+        transform: scaleY(0) translateX(0);
+    }
+    10%{
+        transform: scaleY(1) translateX(0);
+    }
+    90%{
+        transform: scaleY(1) translateX(calc(600px - 10px));
+    }
+    95%,100%{
+        transform: scaleY(0) translateX(calc(600px - 10px));
+    }
+}
+.toplayer{
+    position: absolute;
+    top: 30%;
+    left: 34%;
+    width: 34.3%;
+    height: 40%;
+    background: #ff0000;
+    animation: animatetoplayer 10s linear infinite;
+}
+@keyframes animatetoplayer{
+    0%,5%{
+        transform: translateX(0);
+    }
+    10%{
+        transform:translateX(0);
+    }
+    90%{
+        transform:translateX(calc(600px - 10px));
+    }
+    95%,100%{
+        transform: translateX(calc(600px - 10px));
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------------------- */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:#424446;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.typingslider{
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 90px;
+}
+.typingslider p{
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    animation: slide 15s step-start infinite;
+    
+}
+.typingslider p::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 3px solid black ;
+    background-color: #424446;
+    animation: typing 5s infinite, cursor 1s infinite;
+    
+}
+
+
+.typingslider p:nth-child(1){
+    animation-delay: 0s;
+}
+.typingslider p:nth-child(1)::after{
+    animation-delay: 0s;
+    animation-timing-function: steps(16),step-end;
+}
+
+
+.typingslider p:nth-child(2){
+    animation-delay: 5s;
+}
+.typingslider p:nth-child(2)::after{
+    animation-delay: 0s;
+    animation-timing-function: steps(23),step-end;
+}
+
+
+.typingslider p:nth-child(3){
+    animation-delay: 10s;
+}
+.typingslider p:nth-child(3)::after{
+    animation-delay: 0s;
+    animation-timing-function: steps(12),step-end;
+}
+
+@keyframes cursor{
+    from,to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: #64c9e2;
+    }
+}
+
+@keyframes typing{
+    from{
+        width: 100%;
+    }
+    90%, to {
+        width: 0;
+
+    }
+}
+
+@keyframes slide{
+    33.333333%{
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    to{
+        font-size: 0;
+        letter-spacing: 0;
+    }
+
+} */
